@@ -1815,21 +1815,23 @@ main(
 		ColorLine("**** New Process Over ****", TCOLOR_FUNC);
 	}
 	else {
-// 		COLORCONSOLE::main();
-// 		ns_info::main(_Argc, _Argv, _Env);
-// 		ns_constructFunction::main();
-// 		ns_pointerCast::main();
-// 		ns_smartPointer::main();
-// 		ns_vector::main();
-// 		ns_functionBind::main();
-// 		ns_exception::main();
-// 		ns_processThread::main();  // 创建进程部分未打开
-// 		ns_mutex::main();
-// 		ns_socket::main();
+		COLORCONSOLE::main();
+		ns_info::main(_Argc, _Argv, _Env);
+		ns_constructFunction::main();	// 构造析构
+		ns_pointerCast::main();			// 类型转换
+		ns_smartPointer::main();		// 智能指针
+		ns_vector::main();				// STL容器
+		ns_functionBind::main();		// 函数绑定
+		ns_exception::main();			// 异常捕获
+		ns_processThread::main();		// 创建进程部分未打开
+		ns_mutex::main();				// 锁
+
+		ColorLine("// 网络部分由于阻塞，默认不执行，需要手动打开注释", TCOLOR_NOTE);
+		//ns_socket::main();
 		//ns_socket::func_simpleTCPServer();
 		//ns_socket::func_selectTCPServer();
-		ns_socket::func_pollTCPServer();
+		//ns_socket::func_pollTCPServer();
 	}
-	getchar();
+	system("pause");
 	return 0;
 }

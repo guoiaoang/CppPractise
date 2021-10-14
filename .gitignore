@@ -31,5 +31,8 @@
 *.out
 *.app
 
-#debug
-*\Debug\
+# Debug
+Debug
+*.VC.db
+*.VC.VC.opendb
+.vs
